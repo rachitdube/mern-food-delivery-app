@@ -6,7 +6,8 @@ import foodModel from '../models/foodModel.js'
 const addFood = async (req,res) =>{
 
     let image_filename = `${req.file.filename}`;
-
+    
+    //new food model when admin add dishes
     const food = new foodModel({
         name: req.body.name,
         description:req.body.description,
